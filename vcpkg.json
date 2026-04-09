@@ -1,0 +1,10 @@
+{
+  "name": "model",
+  "version": "1.0.0",
+  "description": "Modern C++20 HTTP client library for frontier AI model APIs",
+  "license": "MIT",
+  "dependencies": [
+    "fetch",
+    "nlohmann-json"
+  ]
+}

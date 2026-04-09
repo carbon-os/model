@@ -1,0 +1,17 @@
+{
+  "default-registry": {
+    "kind": "git",
+    "repository": "https://github.com/microsoft/vcpkg",
+    "baseline": "c82f74667287d3dc386bce81e44964370c91a289"
+  },
+  "registries": [
+    {
+      "baseline": "c5dead0710991dab449bb7695ed3788238006550",
+      "kind": "git",
+      "packages": [
+        "fetch"
+      ],
+      "repository": "https://github.com/carbon-os/fetch"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+function(add_sample name)
+    add_executable(${name} ${name}.cpp)
+    target_link_libraries(${name} PRIVATE model::model)
+endfunction()
+
+add_sample(basic_chat)
+add_sample(streaming)
+add_sample(multi_turn)
+add_sample(tools)
+add_sample(session)
