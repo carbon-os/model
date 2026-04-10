@@ -1,0 +1,14 @@
+{
+  "dependencies": [
+    {
+      "host": true,
+      "name": "vcpkg-cmake"
+    },
+    {
+      "host": true,
+      "name": "vcpkg-cmake-config"
+    }
+  ],
+  "name": "model",
+  "version": "0.0.1"
+}
