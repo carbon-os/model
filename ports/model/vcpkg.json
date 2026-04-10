@@ -7,10 +7,8 @@
     {
       "host": true,
       "name": "vcpkg-cmake-config"
-    },
-    "fetch",
-    "nlohmann-json"
+    }
   ],
   "name": "model",
-  "version": "0.0.2"
+  "version": "0.0.1"
 }
