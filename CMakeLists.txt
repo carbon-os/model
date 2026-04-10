@@ -41,12 +41,25 @@ endif()
 
 # ── Install ───────────────────────────────────────────────────────────────────
 include(GNUInstallDirs)
+include(CMakePackageConfigHelpers)
+
 install(TARGETS model EXPORT modelTargets
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 install(DIRECTORY include/model DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 install(EXPORT modelTargets
-    NAMESPACE model::
+    NAMESPACE   model::
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/model
+)
+
+configure_package_config_file(
+    cmake/model-config.cmake.in
+    "${CMAKE_CURRENT_BINARY_DIR}/model-config.cmake"
+    INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/model
+)
+
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/model-config.cmake"
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/model
 )
