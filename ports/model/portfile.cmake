@@ -1,7 +1,7 @@
 vcpkg_from_git(
     OUT_SOURCE_PATH SOURCE_PATH
     URL             https://github.com/carbon-os/model
-    REF             7f0752fc07be7232770cb8cb2041e6c2906b360d
+    REF             ab5599b149b69ebcd8dcf3e5e0ce3595d7cf07fc
     HEAD_REF        main
 )
 
