@@ -5,9 +5,9 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # ── Dependencies (via vcpkg) ──────────────────────────────────────────────────
-find_package(OpenSSL        REQUIRED)
-find_package(fetch          REQUIRED)
-find_package(nlohmann_json  REQUIRED)
+find_package(OpenSSL       REQUIRED)
+find_package(fetch         REQUIRED)
+find_package(nlohmann_json REQUIRED)
 
 # ── Library target ────────────────────────────────────────────────────────────
 add_library(model
@@ -34,7 +34,10 @@ target_link_libraries(model
 )
 
 # ── Samples ───────────────────────────────────────────────────────────────────
-add_subdirectory(samples)
+option(MODEL_BUILD_SAMPLES "Build sample programs" ON)
+if(MODEL_BUILD_SAMPLES)
+    add_subdirectory(samples)
+endif()
 
 # ── Install ───────────────────────────────────────────────────────────────────
 include(GNUInstallDirs)

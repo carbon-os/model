@@ -7,6 +7,8 @@ vcpkg_from_git(
 
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
+    OPTIONS
+        -DMODEL_BUILD_SAMPLES=OFF
 )
 
 vcpkg_cmake_install()
