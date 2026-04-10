@@ -6,7 +6,7 @@
   },
   "registries": [
     {
-      "baseline": "c5dead0710991dab449bb7695ed3788238006550",
+      "baseline": "5da10139a2c814d5254b022b295bc6f8e5880f6d",
       "kind": "git",
       "packages": [
         "fetch"
