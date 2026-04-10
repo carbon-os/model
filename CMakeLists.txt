@@ -43,12 +43,12 @@ endif()
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
-install(TARGETS model EXPORT modelTargets
+install(TARGETS model EXPORT model-targets
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 install(DIRECTORY include/model DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
-install(EXPORT modelTargets
+install(EXPORT model-targets
     NAMESPACE   model::
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/model
 )
